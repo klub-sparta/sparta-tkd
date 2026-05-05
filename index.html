@@ -9,17 +9,19 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(#000814, #001d3d);
+  background: radial-gradient(circle, #000814, #001d3d);
   text-align: center;
   color: white;
 }
 
+/* TITLE */
 h1 {
   color: gold;
-  margin-top: 20px;
+  margin-top: 15px;
+  letter-spacing: 2px;
 }
 
-/* LOGO (PNG uchun ideal, aylanish yo‘q) */
+/* LOGO (pulse + glow) */
 .logo {
   width: 160px;
   height: 160px;
@@ -27,41 +29,69 @@ h1 {
   object-fit: cover;
   margin: 30px auto;
   display: block;
-  box-shadow: 0 0 25px gold;
+  box-shadow: 0 0 20px gold;
+  animation: pulse 2.5s infinite;
 }
 
-/* Tugmalar */
+/* pulse animation */
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 10px gold; }
+  50% { transform: scale(1.1); box-shadow: 0 0 35px gold; }
+  100% { transform: scale(1); box-shadow: 0 0 10px gold; }
+}
+
+/* BUTTON */
 .btn {
   display: block;
   width: 80%;
   margin: 15px auto;
   padding: 15px;
-  background: #1d3557;
+  border-radius: 30px;
+  background: rgba(29, 53, 87, 0.6);
   color: white;
   text-decoration: none;
-  border-radius: 30px;
   font-size: 18px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px #1d3557;
   transition: 0.3s;
 }
 
+/* hover effect */
 .btn:hover {
-  background: #457b9d;
-  transform: scale(1.05);
+  transform: scale(1.08);
+  background: gold;
+  color: black;
+  box-shadow: 0 0 20px gold;
+}
+
+/* icon spacing */
+.icon {
+  margin-right: 8px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- LOGO -->
 <img src="logo.PNG" class="logo">
 
 <h1>SPARTA TKD</h1>
 
-<a class="btn" href="https://www.instagram.com/klub_sparta">Instagram</a>
-<a class="btn" href="https://t.me/shakhboztb">Telegram</a>
-<a class="btn" href="https://yandex.ru/maps/?ll=69.319132,41.372234&z=17">Bizning manzil</a>
-<a class="btn" href="tel:+998951621111">Bog‘lanish</a>
+<a class="btn" href="https://www.instagram.com/klub_sparta">
+<span class="icon">📸</span>Instagram
+</a>
+
+<a class="btn" href="https://t.me/shakhboztb">
+<span class="icon">✈️</span>Telegram
+</a>
+
+<a class="btn" href="https://yandex.ru/maps/?ll=69.319132,41.372234&z=17">
+<span class="icon">📍</span>Bizning manzil
+</a>
+
+<a class="btn" href="tel:+998951621111">
+<span class="icon">📞</span>Bog‘lanish
+</a>
 
 </body>
 </html>
