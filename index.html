@@ -19,15 +19,21 @@ h1 {
   margin-top: 20px;
 }
 
+/* LOGO (JPG uchun ideal) */
 .logo {
   width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
   margin: 20px auto;
   display: block;
-  animation: spin 5s linear infinite;
-  box-shadow: 0 0 20px gold;
-  border-radius: 10px;
+  background: black; /* oq fonni yashiradi */
+  padding: 10px;     /* ichki joy beradi */
+  box-shadow: 0 0 25px gold;
+  animation: spin 6s linear infinite;
 }
 
+/* animatsiya */
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
