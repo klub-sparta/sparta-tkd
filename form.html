@@ -37,42 +37,11 @@ button {
 
 <h2>Ro‘yxatdan o‘tish</h2>
 
-<form id="form">
-<input type="text" id="name" placeholder="Ismingiz" required>
-<input type="text" id="phone" placeholder="Telefon" required>
-<button type="submit">Yuborish</button>
+<form action="mailto:spartafighters1@gmail.com" method="post" enctype="text/plain">
+  <input type="text" name="Ism" placeholder="Ismingiz" required>
+  <input type="text" name="Telefon" placeholder="Telefon" required>
+  <button type="submit">Yuborish</button>
 </form>
-
-<script>
-document.getElementById("form").addEventListener("submit", function(e){
-  e.preventDefault();
-
-  var name = document.getElementById("name").value;
-  var phone = document.getElementById("phone").value;
-
-  var message = "🥋 Yangi o‘quvchi:\n\n👤 Ism: " + name + "\n📞 Telefon: " + phone;
-
-  var token = "TOKEN";
-  var chat_id = "CHAT_ID";
-
-  fetch("https://api.telegram.org/bot" + token + "/sendMessage", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      chat_id: chat_id,
-      text: message
-    })
-  })
-  .then(() => {
-    alert("Yuborildi ✅");
-  })
-  .catch(() => {
-    alert("Xatolik ❌");
-  });
-});
-</script>
 
 </body>
 </html>
