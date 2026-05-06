@@ -15,18 +15,13 @@ body {
   color: white;
   background: linear-gradient(-45deg, #000814, #001d3d, #001233, #000814);
   background-size: 400% 400%;
-  animation: bgMove 10s ease infinite;
+  animation: bgMove 10s ease infinite, fadeIn 1.5s ease;
 }
 
 @keyframes bgMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
-}
-
-/* FADE IN */
-body {
-  animation: fadeIn 1.5s ease;
 }
 
 @keyframes fadeIn {
@@ -63,7 +58,6 @@ h1 {
   transform: scale(1.15) rotate(5deg);
 }
 
-/* LOGO PULSE */
 @keyframes pulse {
   0% { transform: scale(1); }
   50% { transform: scale(1.08); }
@@ -92,7 +86,6 @@ h1 {
   transition: 0.3s;
 }
 
-/* BUTTON HOVER */
 .btn:hover {
   transform: scale(1.1);
   background: gold;
@@ -103,7 +96,6 @@ h1 {
     0 0 40px gold;
 }
 
-/* ICON */
 .icon {
   margin-right: 10px;
   font-size: 20px;
@@ -126,8 +118,9 @@ h1 {
 <span class="icon">✈️</span>Telegram
 </a>
 
-<a class="btn" href="https://yandex.ru/maps/?ll=69.319132,41.372234&z=17">
-<span class="icon">📍</span>Bizning manzil
+<!-- 🔥 TO‘G‘RILANGAN MANZIL -->
+<a class="btn" href="https://yandex.ru/maps/org/175586139064?si=bxfdxepgmd4k3j0bhdmtzzwb0w" target="_blank">
+<span class="icon">📍</span>Sparta Fighters joylashuvi
 </a>
 
 <a class="btn" href="tel:+998951621111">
